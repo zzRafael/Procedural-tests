@@ -1,7 +1,6 @@
 #importando o que precisa
-import pygame
+import pygame,random
 from pygame.locals import *
-import random
 from random import randint
 
 random.seed(123)
@@ -122,12 +121,12 @@ while True:
     for i in other_planets:
         pygame.draw.rect(window, (255,255,255), (other_planets[counter][0]+vectorx,other_planets[counter][1]+vectory, 50,50))   
         counter += 1
-    #planetpg = pygame.draw.circle(surface=window, center=(planet.center), radius=planet.radius, color=planet.color)
+    planetpg = pygame.draw.circle(surface=window, center=(planet.center), radius=planet.radius, color=planet.color)
     planetpg = pygame.draw.circle(surface=window, color=(255,0,0), center=(planet.xpos+vectorx,planet.ypos+vectory), radius=planet.radius)
     playerpg = pygame.draw.circle(surface=window, center=(player.center), radius=player.radius, color=player.color)
-    #hipo_line = pygame.draw.line(surface=window, start_pos=(hipotenusa.start_pos), end_pos=(hipotenusa.end_pos), color=hipotenusa.color, width = hipotenusa.width)
-    #cat_adjacente_line = pygame.draw.line(surface=window, start_pos=(cat_adjacente.start_pos), end_pos=(cat_adjacente.end_pos), color=cat_adjacente.color, width = cat_adjacente.width)
-    #cat_oposto_line = pygame.draw.line(surface=window, start_pos=(cat_oposto.start_pos), end_pos=(cat_oposto.end_pos), color=cat_oposto.color, width = cat_oposto.width)
+    hipo_line = pygame.draw.line(surface=window, start_pos=(hipotenusa.start_pos), end_pos=(hipotenusa.end_pos), color=hipotenusa.color, width = hipotenusa.width)
+    cat_adjacente_line = pygame.draw.line(surface=window, start_pos=(cat_adjacente.start_pos), end_pos=(cat_adjacente.end_pos), color=cat_adjacente.color, width = cat_adjacente.width)
+    cat_oposto_line = pygame.draw.line(surface=window, start_pos=(cat_oposto.start_pos), end_pos=(cat_oposto.end_pos), color=cat_oposto.color, width = cat_oposto.width)
     ##########
 
     #Mostrando a distancia entre o player e o planeta
