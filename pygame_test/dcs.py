@@ -236,7 +236,7 @@ marte_img = pygame.transform.scale(marte_img, (marte_width*multiple, marte_heigh
 # vector
 vector = Vector(speed = 10)
 # Objects
-player1 = RectObj(speed = 10000, height=2, width =2, ypos=height//2, xpos=width//2)
+player1 = RectObj(speed = 1, height=2, width =2, ypos=height//2, xpos=width//2)
 testplanet = RectObj(color = (0,255,0), xpos=0, ypos=0)
 current_chunk = Chunk(star_amount=1, chunk_pixel_size=1000)
 info = Info()
