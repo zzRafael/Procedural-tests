@@ -213,6 +213,7 @@ class Info:
             f'PLAYER_SPEED: {player1.speed}',
             f'VECTOR_SPEED: {vector.speed}',
             f'STAR_AMOUNT: {current_chunk.star_amount}',
+            f'TOTAL_STAR_AMOUNT: {current_chunk.star_amount * 9}',
             f'CHUNK_SIZE: {current_chunk.chunk_pixel_size}',
             f'CHUNK_SEED: {current_chunk.seed}',
             f'BORDER: {border}',
