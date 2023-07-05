@@ -128,7 +128,6 @@ while True:
     cat_adjacente_line = pygame.draw.line(surface=window, start_pos=(cat_adjacente.start_pos), end_pos=(cat_adjacente.end_pos), color=cat_adjacente.color, width = cat_adjacente.width)
     cat_oposto_line = pygame.draw.line(surface=window, start_pos=(cat_oposto.start_pos), end_pos=(cat_oposto.end_pos), color=cat_oposto.color, width = cat_oposto.width)
     ##########
-
     #Mostrando a distancia entre o player e o planeta
     distance = get_distance(planet,player)
 
