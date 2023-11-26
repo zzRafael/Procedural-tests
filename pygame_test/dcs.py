@@ -1,4 +1,4 @@
-import pygame
+import pygame, os
 from pygame.locals import*
 from sys import exit
 import random
@@ -227,6 +227,12 @@ class Info:
             self.counter += 1
 
 
+file = __file__
+file = file.split('\\')[:-1]
+file = '\\'.join(file)
+
+os.chdir(file)
+
 marte_img = pygame.image.load("./images/marte.png").convert_alpha()
 marte_width = marte_img.get_rect().width
 marte_height = marte_img.get_rect().height
@@ -237,7 +243,7 @@ marte_img = pygame.transform.scale(marte_img, (marte_width*multiple, marte_heigh
 # vector
 vector = Vector(speed = 10)
 # Objects
-player1 = RectObj(speed = 1, height=2, width =2, ypos=height//2, xpos=width//2)
+player1 = RectObj(speed = 100000, height=2, width =2, ypos=height//2, xpos=width//2)
 testplanet = RectObj(color = (0,255,0), xpos=0, ypos=0)
 current_chunk = Chunk(star_amount=1, chunk_pixel_size=1000)
 info = Info()
